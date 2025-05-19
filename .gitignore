@@ -1,0 +1,46 @@
+# Laravel directories
+/vendor/*
+/node_modules/
+/public/storage
+/storage/*.key
+/storage/debugbar
+/storage/framework/cache
+/storage/framework/sessions
+/storage/framework/testing
+/storage/framework/views
+/storage/logs
+
+# Laravel environment files
+.env
+/.env.*.backup
+
+# Cache, debug, and IDE files
+/.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+/.vagrant
+/.idea
+/.vscode
+*.log
+*.cache
+
+# Composer files
+composer.lock
+
+# NPM/Yarn files
+yarn.lock
+npm-debug.log*
+pnpm-debug.log*
+
+# OS/Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+*.tmp
+*.orig
+
+# Other
+/tests/_output
+/tests/_support/_generated

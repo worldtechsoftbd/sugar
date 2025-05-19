@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+    php_apache:
+        container_name: hr-payroll-eSoftHr
+        image: roy95/php8.2-oracle-apache:latest
+        ports:
+            - "84:80"
+        volumes:
+            - ./:/var/www/html
+        networks:
+            - basicBridge
+
+networks:
+    basicBridge:
+        external:
+            name: basicBridge
