@@ -1,7 +1,6 @@
 # Laravel directories
 /vendor/*
 /node_modules/
-/public/storage
 /storage/*.key
 /storage/debugbar
 /storage/framework/cache
