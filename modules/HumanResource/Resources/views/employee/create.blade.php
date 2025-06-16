@@ -60,29 +60,29 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     @input(['input_name' => 'first_name', 'additional_class' => 'required-field'])
-                                    @input(['input_name' => 'middle_name', 'required' => false])
-                                    @input(['input_name' => 'last_name', 'additional_class' => 'required-field'])
-                                    @input(['input_name' => 'email', 'type' => 'email', 'additional_class' => 'required-field', 'additional_id' => 'email', 'required' => true])
+{{--                                    @input(['input_name' => 'middle_name', 'required' => false])--}}
+{{--                                    @input(['input_name' => 'last_name', 'additional_class' => 'false'])--}}
+                                    @input(['input_name' => 'email', 'type' => 'email', 'additional_class' => 'required-field', 'additional_id' => 'email', 'required' => false])
                                     @input(['input_name' => 'phone', 'additional_class' => 'required-field'])
-                                    <div class="cust_border form-group mb-3 mx-0 pb-3 row">
-                                        <label for="country"
-                                            class="col-sm-3 col-form-label ps-0">{{ localize('country') }}</label>
-                                        <div class="col-lg-9">
-                                            <select name="state_id" class="form-select select-basic-single">
-                                                <option value="">{{ localize('select_country') }}</option>
-                                                @foreach ($countries as $key => $country)
-                                                    <option value="{{ $country->id }}"
-                                                        {{ old('state_id') == $country->id ? 'selected' : '' }}>
-                                                        {{ $country->country_name }}</option>
-                                                @endforeach
-                                            </select>
-                                            @if ($errors->has('state_id'))
-                                                <div class="error text-danger text-start">{{ $errors->first('state_id') }}
-                                                </div>
-                                            @endif
-                                        </div>
-                                    </div>
-                                    @input(['input_name' => 'city', 'required' => false])
+{{--                                    <div class="cust_border form-group mb-3 mx-0 pb-3 row">--}}
+{{--                                        <label for="country"--}}
+{{--                                            class="col-sm-3 col-form-label ps-0">{{ localize('country') }}</label>--}}
+{{--                                        <div class="col-lg-9">--}}
+{{--                                            <select name="state_id" class="form-select select-basic-single">--}}
+{{--                                                <option value="">{{ localize('select_country') }}</option>--}}
+{{--                                                @foreach ($countries as $key => $country)--}}
+{{--                                                    <option value="{{ $country->id }}"--}}
+{{--                                                        {{ old('state_id') == $country->id ? 'selected' : '' }}>--}}
+{{--                                                        {{ $country->country_name }}</option>--}}
+{{--                                                @endforeach--}}
+{{--                                            </select>--}}
+{{--                                            @if ($errors->has('state_id'))--}}
+{{--                                                <div class="error text-danger text-start">{{ $errors->first('state_id') }}--}}
+{{--                                                </div>--}}
+{{--                                            @endif--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    @input(['input_name' => 'city', 'required' => false])--}}
 
                                 </div>
                                 <div class="col-md-6">

@@ -72,37 +72,37 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     @input(['input_name' => 'first_name', 'additional_class' => 'required-field', 'value' => $employee->first_name])
-                                    @input(['input_name' => 'middle_name', 'value' => $employee->middle_name])
-                                    @input(['input_name' => 'last_name', 'additional_class' => 'required-field', 'value' => $employee->last_name])
-                                    @input(['input_name' => 'email', 'type' => 'email', 'additional_class' => 'required-field', 'value' => $employee->email])
+{{--                                    @input(['input_name' => 'middle_name', 'value' => $employee->middle_name])--}}
+{{--                                    @input(['input_name' => 'last_name', 'additional_class' => 'required-field', 'value' => $employee->last_name])--}}
+                                    @input(['input_name' => 'email', 'type' => 'email',  'value' => $employee->email])
                                     @input(['input_name' => 'phone', 'additional_class' => 'required-field', 'value' => $employee->phone])
-                                    <div class="cust_border form-group mb-3 mx-0 pb-3 row">
-                                        <label for="country"
-                                            class="col-sm-3 col-form-label ps-0">{{ localize('country') }}</label>
-                                        <div class="col-lg-9">
-                                            <select name="state_id" class="form-select">
-                                                <option value="">{{ localize('select_country') }}</option>
-                                                @foreach ($countries as $key => $country)
-                                                    <option value="{{ $country->id }}"
-                                                        {{ $country->id == $employee->state_id ? 'selected' : '' }}>
-                                                        {{ $country->country_name }}</option>
-                                                @endforeach
-                                            </select>
-                                            @if ($errors->has('state_id'))
-                                                <div class="error text-danger text-start">{{ $errors->first('state_id') }}
-                                                </div>
-                                            @endif
-                                        </div>
-                                    </div>
-                                    @input(['input_name' => 'city', 'required' => false, 'value' => $employee->city])
+{{--                                    <div class="cust_border form-group mb-3 mx-0 pb-3 row">--}}
+{{--                                        <label for="country"--}}
+{{--                                            class="col-sm-3 col-form-label ps-0">{{ localize('country') }}</label>--}}
+{{--                                        <div class="col-lg-9">--}}
+{{--                                            <select name="state_id" class="form-select">--}}
+{{--                                                <option value="">{{ localize('select_country') }}</option>--}}
+{{--                                                @foreach ($countries as $key => $country)--}}
+{{--                                                    <option value="{{ $country->id }}"--}}
+{{--                                                        {{ $country->id == $employee->state_id ? 'selected' : '' }}>--}}
+{{--                                                        {{ $country->country_name }}</option>--}}
+{{--                                                @endforeach--}}
+{{--                                            </select>--}}
+{{--                                            @if ($errors->has('state_id'))--}}
+{{--                                                <div class="error text-danger text-start">{{ $errors->first('state_id') }}--}}
+{{--                                                </div>--}}
+{{--                                            @endif--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    @input(['input_name' => 'city', 'required' => false, 'value' => $employee->city])--}}
                                 </div>
                                 <div class="col-md-6">
-                                    @input(['input_name' => 'zip', 'required' => false, 'value' => $employee->zip])
-                                    @input(['input_name' => 'alternate_phone', 'required' => false, 'value' => $employee->alternate_phone])
+{{--                                    @input(['input_name' => 'zip', 'required' => false, 'value' => $employee->zip])--}}
+{{--                                    @input(['input_name' => 'alternate_phone', 'required' => false, 'value' => $employee->alternate_phone])--}}
                                     @input(['input_name' => 'national_id_no', 'required' => false, 'value' => $employee->national_id_no])
-                                    @input(['input_name' => 'iqama_no', 'required' => false, 'value' => $employee->iqama_no])
+{{--                                    @input(['input_name' => 'iqama_no', 'required' => false, 'value' => $employee->iqama_no])--}}
                                     @input(['input_name' => 'passport_no', 'required' => false, 'value' => $employee->passport_no])
-                                    @input(['input_name' => 'driving_license_no', 'required' => false, 'value' => $employee->driving_license_no])
+{{--                                    @input(['input_name' => 'driving_license_no', 'required' => false, 'value' => $employee->driving_license_no])--}}
                                     <div class="cust_border form-group mb-3 mx-0 pb-3 row">
                                         <label for="attendance_time_id"
                                             class="col-sm-3 col-form-label ps-0">{{ localize('attendance_time') }}
