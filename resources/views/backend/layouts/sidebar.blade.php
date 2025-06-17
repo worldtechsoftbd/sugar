@@ -204,12 +204,12 @@
                                         href="{{ route('employees.index') }}">{{ localize('employee') }}</a>
                                 </li>
                             @endcan
-                            @can('read_employee_performance')
-                                <li class="{{ request()->routeIs('employee-performances.*') ? 'mm-active' : '' }}">
-                                    <a class="dropdown-item"
-                                        href="{{ route('employee-performances.index') }}">{{ localize('employee_performance ') }}</a>
-                                </li>
-                            @endcan
+{{--                            @can('read_employee_performance')--}}
+{{--                                <li class="{{ request()->routeIs('employee-performances.*') ? 'mm-active' : '' }}">--}}
+{{--                                    <a class="dropdown-item"--}}
+{{--                                        href="{{ route('employee-performances.index') }}">{{ localize('employee_performance ') }}</a>--}}
+{{--                                </li>--}}
+{{--                            @endcan--}}
                         </ul>
                     </li>
                 @endcan
@@ -221,27 +221,64 @@
                             <span> {{ localize('leave') }}</span>
                         </a>
                         <ul class="nav-second-level {{ request()->routeIs('leave.*') ? 'mm-show' : '' }}">
-                            @can('read_leave')
-                                <li class="{{ request()->routeIs('leave.weekleave') ? 'mm-active' : '' }}">
-                                    <a class="dropdown-item"
-                                        href="{{ route('leave.weekleave') }}">{{ localize('weekly_holiday') }}</a>
-                                </li>
-                                <li class="{{ request()->routeIs('holiday.index') ? 'mm-active' : '' }}">
-                                    <a class="dropdown-item" href="{{ route('holiday.index') }}">{{ localize('holiday') }}</a>
-                                </li>
-                            @endcan
-                            @can('read_leave_application')
-                                <li class="{{ request()->routeIs('leave.index') ? 'mm-active' : '' }}">
-                                    <a class="dropdown-item"
-                                        href="{{ route('leave.index') }}">{{ localize('leave_application  ') }}</a>
-                                </li>
-                            @endcan
+{{--                            @can('read_leave')--}}
+{{--                                <li class="{{ request()->routeIs('leave.weekleave') ? 'mm-active' : '' }}">--}}
+{{--                                    <a class="dropdown-item"--}}
+{{--                                        href="{{ route('leave.weekleave') }}">{{ localize('weekly_holiday') }}</a>--}}
+{{--                                </li>--}}
+{{--                                <li class="{{ request()->routeIs('holiday.index') ? 'mm-active' : '' }}">--}}
+{{--                                    <a class="dropdown-item" href="{{ route('holiday.index') }}">{{ localize('holiday') }}</a>--}}
+{{--                                </li>--}}
+{{--                            @endcan--}}
+{{--                            @can('read_leave_application')--}}
+{{--                                <li class="{{ request()->routeIs('leave.index') ? 'mm-active' : '' }}">--}}
+{{--                                    <a class="dropdown-item"--}}
+{{--                                        href="{{ route('leave.index') }}">{{ localize('leave_application  ') }}</a>--}}
+{{--                                </li>--}}
+{{--                            @endcan--}}
 
 {{--                            empoyee leave blance--}}
 
                                 @can('read_leave_application')
                                     <li class="{{ request()->routeIs('leave_balance.form') ? 'mm-active' : '' }}">
                                         <a class="dropdown-item" href="{{ route('leave_balance.update') }}">{{ localize('Leave Balance') }}</a>
+                                    </li>
+                                @endcan
+
+                                @can('read_weekly_holiday')
+                                    <li class="nav-item">
+                                        <a class="nav-link {{ request()->routeIs('leave.weekleave') || request()->routeIs('leave.weekleave.edit') ? 'active' : '' }}"
+                                           href="{{ route('leave.weekleave') }}">{{ localize('weekly_holiday') }}</a>
+                                    </li>
+                                @endcan
+                                @can('read_holiday')
+                                    <li class="nav-item">
+                                        <a class="nav-link mt-0 {{ request()->routeIs('holiday.index') ? 'active' : '' }}"
+                                           href="{{ route('holiday.index') }}">{{ localize('holiday') }}</a>
+                                    </li>
+                                @endcan
+                                @can('read_leave_type')
+                                    <li class="nav-item">
+                                        <a class="nav-link mt-0 {{ request()->routeIs('leave.leaveTypeindex') ? 'active' : '' }}"
+                                           href="{{ route('leave.leaveTypeindex') }}">{{ localize('leave_type') }}</a>
+                                    </li>
+                                @endcan
+                                <!-- @can('read_leave_type')
+                                    <li class="nav-item">
+                                        <a class="nav-link mt-0 {{ request()->routeIs('leave.leaveGenerate') || request()->routeIs('leave.generateLeaveDetail') ? 'active' : '' }}"
+                        href="{{ route('leave.leaveGenerate') }}">{{ localize('leave_generate') }}</a>
+                </li>
+            @endcan -->
+                                @can('read_leave_approval')
+                                    <li class="nav-item">
+                                        <a class="nav-link mt-0 {{ request()->routeIs('leave.approval') ? 'active' : '' }}"
+                                           href="{{ route('leave.approval') }}">{{ localize('leave_approval') }}</a>
+                                    </li>
+                                @endcan
+                                @can('read_leave_application')
+                                    <li class="nav-item">
+                                        <a class="nav-link mt-0 {{ request()->routeIs('leave.index') ? 'active' : '' }}"
+                                           href="{{ route('leave.index') }}">{{ localize('leave_application') }}</a>
                                     </li>
                                 @endcan
 
