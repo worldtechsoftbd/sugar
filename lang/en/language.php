@@ -746,4 +746,12 @@
   'f_key_goals_for_next_review_period' => 'F key goals for next review period',
   'goal_(s)_set_and_agreed_on_with_employee' => 'Goal (s) set and agreed on with employee',
   'proposed_completion_period' => 'Proposed completion period',
+  'notice_list' => 'Notice list',
+  'add_notice' => 'Add notice',
+  'new_notice' => 'New notice',
+  'notice_type' => 'Notice type',
+  'notice_descriptiion' => 'Notice descriptiion',
+  'notice_date' => 'Notice date',
+  'notice_attachment' => 'Notice attachment',
+  'notice_by' => 'Notice by',
 );
