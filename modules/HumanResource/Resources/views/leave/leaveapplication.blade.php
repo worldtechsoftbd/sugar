@@ -42,11 +42,11 @@
                                 aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
 
                                 <div class="row">
-                                    <div class="col-md-2 mb-4">
+                                    <div class="col-md-3 mb-4">
                                         <select id="employee_name" class="select-basic-single">
                                             <option selected value="">{{ localize('all_employees') }}</option>
                                             @foreach ($employees as $employee)
-                                                <option value="{{ $employee->id }}">{{ ucwords($employee->full_name) }}
+                                                <option value="{{ $employee->id }}">{{ ucwords($employee->full_name) }}-{{$employee->pmis_id}}-{{$employee->user_id}}
                                                 </option>
                                             @endforeach
                                         </select>
@@ -106,21 +106,21 @@
 {{--    <script src="{{ module_asset('HumanResource/js/hrcommon.js') }}"></script>--}}
 {{--@endpush--}}
 
-@push('js')
-    {{ $dataTable->scripts(attributes: ['type' => 'module']) }}
-    <script src="{{ module_asset('HumanResource/js/hrcommon.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#employee_name').select2({
-                placeholder: "{{ localize('all_employees') }}",
-                allowClear: true,
-                minimumResultsForSearch: Infinity // This should disable search for fewer than 5 options
-            });
-        });
+{{--@push('js')--}}
+{{--    {{ $dataTable->scripts(attributes: ['type' => 'module']) }}--}}
+{{--    <script src="{{ module_asset('HumanResource/js/hrcommon.js') }}"></script>--}}
+{{--    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>--}}
+{{--    <script>--}}
+{{--        $(document).ready(function() {--}}
+{{--            $('#employee_name').select2({--}}
+{{--                placeholder: "{{ localize('all_employees') }}",--}}
+{{--                allowClear: true,--}}
+{{--                minimumResultsForSearch: Infinity // This should disable search for fewer than 5 options--}}
+{{--            });--}}
+{{--        });--}}
 
-    </script>
-@endpush
+{{--    </script>--}}
+{{--@endpush--}}
 
 @push('js')
     <script>
@@ -161,6 +161,29 @@
                 }
             });
         });
+    </script>
+
+
+    <script>
+
+        $('#addLeaveApplication').on('shown.bs.modal', function () {
+            $(this).find('select').select2({
+                dropdownParent: $('#addLeaveApplication'),
+                placeholder: "Select an option",
+                width: '100%' // Ensures correct alignment
+            });
+        });
+
+
+        // Initialize select2 for the employee_name select
+        // $(document).ready(function() {
+        //     $("#employee_name").select2({
+        //         placeholder: "All Employees"
+        //     });
+        //
+        // });
+
+
     </script>
 @endpush
 

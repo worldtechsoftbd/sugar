@@ -22,12 +22,10 @@
                                     <select name="employee_id" id="employee_id" required class="select-basic-single">
                                         <option value="" selected disabled>{{ localize('select_employee') }}
                                         </option>
-
                                         @foreach ($employees as $employee)
 
-                                            <option value="{{ $employee->id }}">{{ $employee->full_name }}--{{ $employee->employee_id }} </option>
-
-
+                                            <option value="{{ $employee->id }}">{{ ucwords($employee->full_name) }}-{{$employee->pmis_id}}-{{$employee->user_id}}
+                                            </option>
                                         @endforeach
 
                                     </select>
@@ -39,6 +37,7 @@
 
                             </div>
                         </div>
+
 
                         <div class="col-md-12 mt-3">
                             <div class="row">
@@ -162,3 +161,5 @@
         </div>
     </div>
 </div>
+
+

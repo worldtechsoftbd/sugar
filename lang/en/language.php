@@ -754,4 +754,8 @@
   'notice_date' => 'Notice date',
   'notice_attachment' => 'Notice attachment',
   'notice_by' => 'Notice by',
+  'leave_balance_inserted_for_all_employees' => 'Leave balance inserted for all employees',
+  'select_employee_pmis_id' => 'Select employee pmis id',
+  'select_pmis_id' => 'Select pmis id',
+  'all_types' => 'All types',
 );

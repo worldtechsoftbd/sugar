@@ -42,10 +42,10 @@
                                     </div>
                                     <div class="col-md-2 mb-4">
                                         <select id="employee_id" class="select-basic-single">
-                                            <option selected disabled>{{ localize('select_employee_id') }}</option>
+                                            <option selected disabled>{{ localize('select_pmis_id_or_pm_id') }}</option>
                                             @foreach ($employees as $employee)
                                                 <option value="{{ $employee->employee_id }}">
-                                                    {{ $employee->employee_id }}</option>
+                                                    {{$employee->pmis_id}}-{{$employee->user_id}}</option>
                                             @endforeach
                                         </select>
                                     </div>
