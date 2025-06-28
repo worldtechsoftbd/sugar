@@ -158,7 +158,7 @@ class SalaryGenerateController extends Controller
                     $salary_info->total_count = $total_work_days ?? 0;
                     $salary_info->salary_month_year = $request->salary_month;
 
-                    $salary_info->gross = $$employee->employee_files?->gross_salary ?? 0;
+                    $salary_info->gross = $employee->employee_files?->gross_salary ?? 0;
                     $salary_info->basic = $basic ?? 0;
 
                     $salary_info->gross_salary = $employee->employee_files?->gross_salary ?? 0;
@@ -309,7 +309,7 @@ class SalaryGenerateController extends Controller
                     $salary_info->total_count = $total_work_days ?? 0;
                     $salary_info->salary_month_year = $request->salary_month;
 
-                    $salary_info->gross = $$employee->employee_files?->gross_salary ?? 0;
+                    $salary_info->gross = $employee->employee_files?->gross_salary ?? 0;
                     $salary_info->basic = $basic ?? 0;
 
                     $salary_info->gross_salary = $employee->employee_files?->gross_salary ?? 0;

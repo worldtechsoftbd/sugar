@@ -148,7 +148,7 @@
                             <td></td>
                             <td class="text-end border-right"></td>
                             <td>{{ localize('tin_no') }}</td>
-                            <td class="text-end border-right">{{ $employee_file->tin_no }}</td>
+                            <td class="text-end border-right">{{ $employee_file?->tin_no ?? '' }}</td>
                         </tr>
                     </tbody>
                 </table>

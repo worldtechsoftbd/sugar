@@ -339,7 +339,7 @@
                         </div>
                         <div class="col-auto">
                             <time class="fs-13 text-muted">{{ app_setting()->currency?->title }}
-                                {{ number_format($employee_file->basic ?? 0.0, 2) }}</time>
+                                {{ number_format($employee_file?->basic ?? 0.0, 2) }}</time>
                         </div>
                     </div>
                     <hr>
@@ -349,7 +349,7 @@
                         </div>
                         <div class="col-auto">
                             <time class="fs-13 text-muted">{{ app_setting()->currency?->title }}
-                                {{ number_format($employee_file->transport ?? 0.0, 2) }}</time>
+                                {{ number_format($employee_file?->transport ?? 0.0, 2) }}</time>
                         </div>
                     </div>
                     <hr>
@@ -359,7 +359,7 @@
                         </div>
                         <div class="col-auto">
                             <span class="fs-13 text-muted">{{ app_setting()->currency?->title }}
-                                {{ number_format($employee_file->gross_salary, 2) }}</span>
+                                {{ number_format($employee_file?->gross_salary ?? 0.0, 2) }}</span>
                         </div>
                     </div>
                 </div>

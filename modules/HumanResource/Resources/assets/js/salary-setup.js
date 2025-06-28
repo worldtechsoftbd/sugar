@@ -1,7 +1,7 @@
 $("#employee_id").change(function () {
     let url = $("#employee_id option:selected").data("id");
     $.get(url, function (data, status) {
-        let gross_amount = data.employee_files.gross_salary;
+        let gross_amount = data.employee_files ? data.employee_files.gross_salary : 0;
 
         let basic_percent = $("#basic").data("amount");
         var basic_amount;
@@ -43,6 +43,6 @@ $("#employee_id").change(function () {
             }
         });
 
-        $("#grsalary").val(data.employee_files.gross_salary);
+        $("#grsalary").val(data.employee_files ? data.employee_files.gross_salary : 0);
     });
 });

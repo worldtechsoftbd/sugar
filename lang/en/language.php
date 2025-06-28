@@ -758,4 +758,10 @@
   'select_employee_pmis_id' => 'Select employee pmis id',
   'select_pmis_id' => 'Select pmis id',
   'all_types' => 'All types',
+  'select_pmis_id_or_pm_id' => 'Select pmis id or pm id',
+  'absent' => 'Absent',
+  'candidate_id' => 'Candidate id',
+  'selection_terms' => 'Selection terms',
+  'add_selection' => 'Add selection',
+  'selection_form' => 'Selection form',
 );
